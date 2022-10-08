@@ -3,6 +3,7 @@
     height: 640px;
     background-color: rgb(148, 238, 238);
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -13,8 +14,3 @@
     flex-direction: column;
 }
 
-.square {
-    border: solid;
-    background-color: black;
-    flex: 1;
-}
