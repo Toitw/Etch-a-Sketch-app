@@ -11,8 +11,6 @@ const squareWidth = 640/columnLineNumber;
 //Function that creates squares depending on the columnLineNumber
 //variable. It will stop when reached it.
 const whiteboardContainer = document.querySelector(".whiteboardContainer");
-const square = document.createElement("div");
-square.classList.add("square");
 function createSquares () {
     for(let i = 0; i < totalSquareNumber; i++) {
         console.log(columnLineNumber);
@@ -24,11 +22,10 @@ function createSquares () {
         square.style.flexShrink = "1";
         square.style.flexBasis = "initial";
         whiteboardContainer.appendChild(square);
-        square.addEventListener("mouseover", blackSquare);
+        square.addEventListener("mouseover", function () {
+            square.style.backgroundColor = "black";
+        });
     };
 }
 
 //Change the square background color to black when hovering over
-function blackSquare () {
-    square.style[background-color] = "black";
-}
