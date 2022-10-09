@@ -51,3 +51,17 @@ function multicolor () {
     });
     });
 }
+
+//Black button
+const blackButton = document.querySelector(".blackButton");
+blackButton.addEventListener("click", blackColor);
+
+//Blackcolor function
+function blackColor () {
+    const blackSquares = document.querySelectorAll(".square");
+    blackSquares.forEach(element => {
+	element.addEventListener("mouseover", function() {
+        element.style.backgroundColor = "black";
+    });
+    });
+}
