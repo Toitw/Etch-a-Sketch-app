@@ -28,4 +28,12 @@ function createSquares () {
     };
 }
 
-//Change the square background color to black when hovering over
+//Reset the whiteboard
+        const resetButton = document.querySelector(".resetButton");
+        resetButton.addEventListener("click", function() {
+        const squares = document.querySelectorAll(".square");
+        squares.forEach(element => {
+	    element.style.backgroundColor = "white";
+        });
+        });
+
