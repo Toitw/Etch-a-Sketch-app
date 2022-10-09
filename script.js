@@ -12,6 +12,8 @@ const squareWidth = 640/columnLineNumber;
 //variable. It will stop when reached it.
 const whiteboardContainer = document.querySelector(".whiteboardContainer");
 function createSquares () {
+    let totalSquareNumber = columnLineNumber*columnLineNumber;
+    const squareWidth = 640/columnLineNumber;
     for(let i = 0; i < totalSquareNumber; i++) {
         console.log(columnLineNumber);
         const square = document.createElement("div");
@@ -64,4 +66,28 @@ function blackColor () {
         element.style.backgroundColor = "black";
     });
     });
+}
+
+//Change size button
+const changeSize = document.querySelector(".changeSize");
+changeSize.addEventListener("click", enterRows);
+
+//Change number of rows function
+function enterRows () {
+    const selectRows = prompt("Enter the number of rows", "Max 64 rows");
+    columnLineNumber = selectRows;
+    console.log(columnLineNumber);
+    console.log(totalSquareNumber);
+    removeSquares();
+    console.log(totalSquareNumber);
+    console.log(columnLineNumber);
+    createSquares();
+}
+
+//Auxiliary function to remove grid before changing the size
+function removeSquares () {
+    const squares = document.querySelectorAll(".square");
+    squares.forEach(element => {
+        whiteboardContainer.removeChild(element);
+    })
 }
