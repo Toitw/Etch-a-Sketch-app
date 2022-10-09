@@ -29,11 +29,25 @@ function createSquares () {
 }
 
 //Reset the whiteboard
-        const resetButton = document.querySelector(".resetButton");
-        resetButton.addEventListener("click", function() {
-        const squares = document.querySelectorAll(".square");
-        squares.forEach(element => {
-	    element.style.backgroundColor = "white";
-        });
-        });
+const resetButton = document.querySelector(".resetButton");
+resetButton.addEventListener("click", function() {
+    const squares = document.querySelectorAll(".square");
+    squares.forEach(element => {
+    element.style.backgroundColor = "white";
+    });
+});
 
+//Multicolor Button
+const multicolorButton = document.querySelector(".multicolorButton");
+multicolorButton.addEventListener("click", multicolor);
+
+//Multicolor function
+function multicolor () {
+    const multicolorSquares = document.querySelectorAll(".square");
+    multicolorSquares.forEach(element => {
+	element.addEventListener("mouseover", function() {
+        //that backgroundColor is a formula to create random color
+        element.style.backgroundColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+    });
+    });
+}
