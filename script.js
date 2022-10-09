@@ -76,12 +76,12 @@ changeSize.addEventListener("click", enterRows);
 function enterRows () {
     const selectRows = prompt("Enter the number of rows", "Max 64 rows");
     columnLineNumber = selectRows;
-    console.log(columnLineNumber);
-    console.log(totalSquareNumber);
+    if(columnLineNumber > 64) {
+        prompt("The maximum number of rows is 64. Please try again", "Max 64 rows");
+    } else {
     removeSquares();
-    console.log(totalSquareNumber);
-    console.log(columnLineNumber);
     createSquares();
+    }
 }
 
 //Auxiliary function to remove grid before changing the size

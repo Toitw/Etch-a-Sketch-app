@@ -2,7 +2,6 @@
     width: 640px;
     height: 640px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     border: solid;
 }
@@ -10,6 +9,24 @@
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-direction: column;
+}
+
+.buttonContainer {
+    background-color: rgb(241, 145, 18);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.preContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
