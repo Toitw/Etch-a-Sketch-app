@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 .whiteboardContainer {
     width: 640px;
     height: 640px;
@@ -5,6 +9,7 @@
     justify-content: center;
     flex-wrap: wrap;
     border: solid;
+    background-color: white;
 }
 
 .container {
@@ -12,25 +17,61 @@
     justify-content: center;
     align-items: stretch;
     flex-direction: column;
+    background-color: #FF884B;
+    margin: 0;
 }
 
-<<<<<<< HEAD
 .buttonContainer {
-    background-color: rgb(241, 145, 18);
+    background-color: #FF577F;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 40px;
+    gap: 20px;
 }
 
 h1 {
     display: flex;
     justify-content: center;
+    padding: 20px;;
+    color: white;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .preContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #FFD384;
+    padding: 30px;
 }
-=======
->>>>>>> refs/remotes/origin/main
+
+button {
+    padding: 20px;
+    background-color: #FFF9B0;
+    border-radius: 10px;
+    min-width: 140px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FF884B;
+}
+
+.blackButton {
+    background-color: black;
+    color: white;
+}
+
+.multicolorButton {
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    color: white;
+}
+
+.footer {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}

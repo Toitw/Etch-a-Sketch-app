@@ -30,7 +30,6 @@ function createSquares () {
     };
 }
 
-<<<<<<< HEAD
 //Reset the whiteboard
 const resetButton = document.querySelector(".resetButton");
 resetButton.addEventListener("click", function() {
@@ -92,9 +91,7 @@ function removeSquares () {
         whiteboardContainer.removeChild(element);
     })
 }
-=======
 //Change the square background color to black when hovering over
 function blackSquare () {
     square.style[background-color] = "black";
 }
->>>>>>> refs/remotes/origin/main
